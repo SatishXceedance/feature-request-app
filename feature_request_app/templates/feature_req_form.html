@@ -1,0 +1,54 @@
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add New Feature Request</h4>
+        </div>
+        <div class="modal-body">
+          <form id="feature_req_form">
+            <div class="form-group">
+              <label>Title:</label>
+              <input type="text" class="form-control" id="req_title" placeholder="Enter Title" name="title" required="true">
+            </div>
+            <div class="form-group">
+              <label>Description:</label>
+              <input type="text" class="form-control" id="req_desc"  placeholder="Enter Product Description" name="description" required="true">
+            </div>
+            <div class="form-group">
+              <label for="client">Client:</label>            
+                <select class="form-control" id="req_client">
+                  {% for client in clients_list %}
+                    <option value="{{client.id}}">{{client.name}}</option>
+                  {% endfor %}                 
+                </select> 
+            </div>
+            <div class="form-group">
+              <label>Client Periority:</label>
+              <input type="number" class="form-control" placeholder="Enter Client Priority" name="client_priority" id="req_client_priority" required="true" min="1">
+            </div>
+            <div class="form-group">
+              <label>Target Date:</label>
+              <input type="text" placeholder="Enter Date(dd/mm/yyyy)" name="target_date" class="form-control" id="req_target_date" required="true">
+            </div>
+            <div class="form-group">
+              <label>Product Area:</label>
+              <select class="form-control" id="req_product_area">
+                {% for product_area in product_area_list %}
+                    <option value="{{product_area.id}}">{{product_area.name}}</option>
+                {% endfor %}                 
+              </select> 
+            </div>
+            <a class="btn btn-default" href="javascript: submitform()">Submit</a>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
