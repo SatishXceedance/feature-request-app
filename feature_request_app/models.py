@@ -1,21 +1,21 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
-
 from django.core.validators import MinValueValidator
 
 
 
+# client table
 class Client(models.Model):
 	name = models.CharField(max_length=30, unique=True)
 
 
-class Product_Area(models.Model):
+# product area table
+class ProductArea(models.Model):
 	name = models.CharField(max_length=30, unique=True)
 
 
-class Feature_Requests(models.Model):
+# feature request table
+class FeatureRequests(models.Model):
 	title = models.CharField(max_length=30)
 	description = models.TextField()
 	client = models.ForeignKey('Client', on_delete=models.CASCADE)
@@ -23,5 +23,5 @@ class Feature_Requests(models.Model):
 									    validators=[MinValueValidator(1)]
 									    )
 	target_date = models.DateTimeField(blank=True, null=True)   
-	product_area = models.ForeignKey('Product_Area', on_delete=models.CASCADE)
+	product_area = models.ForeignKey('ProductArea', on_delete=models.CASCADE)
 
