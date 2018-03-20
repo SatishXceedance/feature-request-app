@@ -1,6 +1,7 @@
 from rest_framework import status
 from feature_request_app.models import Client, ProductArea, FeatureRequests
 from feature_request_app.serializers import FeatureRequestSerializer
+from rest_framework.response import Response
 import datetime
 
 
@@ -31,7 +32,8 @@ def is_product_area_exist(product_area_id):
 		product_area = ProductArea.objects.get(pk=product_area_id)
 		return (True, product_area)
 	except ProductArea.DoesNotExist:
-		response = Response('Product Area Not Found', status=status.HTTP_400_BAD_REQUEST)
+		response = Response('Product Area Not Found', 
+								status=status.HTTP_400_BAD_REQUEST)
 		return (False, response)
 
 #client priority validation
@@ -51,13 +53,13 @@ def is_client_periority_valid(client_priority):
 #target date validation
 def is_valid_date(target_date):
 	try:
-		target_date = datetime.datetime.strptime(target_date, '%d-%m-%Y')
+		target_date = datetime.datetime.strptime(target_date, '%Y-%m-%d')
 		if datetime.datetime.now() <= target_date:
 			return (True, target_date)
 		else:
 			response = Response('Target date has gone',
 						status=status.HTTP_400_BAD_REQUEST)
 	except ValueError:
-		response = Response('Incorrect Date, Should Be DD-MM-YYYY',
+		response = Response('Incorrect Date Formate',
 						status=status.HTTP_400_BAD_REQUEST)
 	return (False, response)

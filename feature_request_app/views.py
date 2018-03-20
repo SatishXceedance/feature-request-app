@@ -8,12 +8,11 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.db.models import F
 
-from feature_request_app.serializers import FeatureRequestSerializer
+from feature_request_app.serializers import ProductAreSerializer, FeatureRequestSerializer, ClientSerializer
 from feature_request_app.models import Client, ProductArea, FeatureRequests
-from feature_request_app.api_validators import is_client_exist, is_valid_date, is_client_periority_valid, is_client_exist
+from feature_request_app.api_validators import is_client_exist, is_valid_date, is_product_area_exist, is_client_periority_valid, is_client_exist
 import datetime
 from rest_framework.views import APIView
-
 
 
 class HomePageView(View):
@@ -35,11 +34,20 @@ class FeatureRequestList(APIView):
 
 	""" 
 	def get(self, request, format=None):
-		feature_requests = FeatureRequests.objects.all()
-		serializer = FeatureRequestSerializer(feature_requests, many=True)
-		return Response(serializer.data)
+		# import pdb
+		# pdb.set_trace()
+		fea_req_serializer = FeatureRequestSerializer(FeatureRequests.objects.all(),
+							 many=True)
+		client_serislizer = ClientSerializer(Client.objects.all(), many=True)
+		product_area_serializer  = ProductAreSerializer(ProductArea.objects.all(), 
+									many=True)
+		# return Response(serializer.data)
+		return Response({'feature_requests': fea_req_serializer.data,
+						'clients': client_serislizer.data,
+						'producct_areas': product_area_serializer.data})
 
 	def post(self, request, format=None):
+		serializer = FeatureRequestSerializer(data=request.data)
 		post_data = request.POST.copy()
 		try:
 			cliest_exist, response = is_client_exist(post_data.get('client'))
