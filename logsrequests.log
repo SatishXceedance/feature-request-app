@@ -1,0 +1,350 @@
+(0.007) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.009) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.009) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 6605
+"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200
+"GET /static/css/main.css HTTP/1.1" 200 248
+"GET /static/js/knockout-3.0.0.js HTTP/1.1" 200 46128
+"GET /static/js/jquery.min.js HTTP/1.1" 200 86926
+"GET /static/js/knockout-validation.js HTTP/1.1" 200 16623
+"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045
+(0.001) SELECT "feature_request_app_featurerequests"."id", "feature_request_app_featurerequests"."title", "feature_request_app_featurerequests"."description", "feature_request_app_featurerequests"."client_id", "feature_request_app_featurerequests"."client_priority", "feature_request_app_featurerequests"."target_date", "feature_request_app_featurerequests"."product_area_id" FROM "feature_request_app_featurerequests"; args=()
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 3; args=(3,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 2; args=(2,)
+(0.014) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.009) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.009) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 4; args=(4,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client"; args=()
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea"; args=()
+"GET /feature_request_list/ HTTP/1.1" 200 1753
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern 'feature_request_list/' [name='feature_request_list']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern 'feature_request_list<drf_format_suffix:format>' [name='feature_request_list']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern '<drf_format_suffix:format>' [name='home']>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2762
+"GET / HTTP/1.1" 200 6605
+"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/js/knockout-3.0.0.js HTTP/1.1" 304 0
+"GET /static/js/jquery.min.js HTTP/1.1" 304 0
+"GET /static/js/knockout-validation.js HTTP/1.1" 304 0
+"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+(0.001) SELECT "feature_request_app_featurerequests"."id", "feature_request_app_featurerequests"."title", "feature_request_app_featurerequests"."description", "feature_request_app_featurerequests"."client_id", "feature_request_app_featurerequests"."client_priority", "feature_request_app_featurerequests"."target_date", "feature_request_app_featurerequests"."product_area_id" FROM "feature_request_app_featurerequests"; args=()
+(0.004) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.003) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 3; args=(3,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 4; args=(4,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client"; args=()
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea"; args=()
+"GET /feature_request_list/ HTTP/1.1" 200 1753
+(0.031) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 6605
+"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200
+"GET /static/css/main.css HTTP/1.1" 200 248
+"GET /static/js/knockout-3.0.0.js HTTP/1.1" 200 46128
+"GET /static/js/jquery.min.js HTTP/1.1" 200 86926
+"GET /static/js/knockout-validation.js HTTP/1.1" 200 16623
+"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045
+(0.001) SELECT "feature_request_app_featurerequests"."id", "feature_request_app_featurerequests"."title", "feature_request_app_featurerequests"."description", "feature_request_app_featurerequests"."client_id", "feature_request_app_featurerequests"."client_priority", "feature_request_app_featurerequests"."target_date", "feature_request_app_featurerequests"."product_area_id" FROM "feature_request_app_featurerequests"; args=()
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.001) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 3; args=(3,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 4; args=(4,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client"; args=()
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea"; args=()
+"GET /feature_request_list/ HTTP/1.1" 200 1753
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern 'feature_request_list/' [name='feature_request_list']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern 'feature_request_list<drf_format_suffix:format>' [name='feature_request_list']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern '<drf_format_suffix:format>' [name='home']>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2762
+"GET / HTTP/1.1" 200 6605
+"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200
+"GET /static/css/main.css HTTP/1.1" 200 248
+"GET /static/js/knockout-3.0.0.js HTTP/1.1" 200 46128
+"GET /static/js/jquery.min.js HTTP/1.1" 200 86926
+"GET /static/js/knockout-validation.js HTTP/1.1" 200 16623
+"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045
+(0.004) SELECT "feature_request_app_featurerequests"."id", "feature_request_app_featurerequests"."title", "feature_request_app_featurerequests"."description", "feature_request_app_featurerequests"."client_id", "feature_request_app_featurerequests"."client_priority", "feature_request_app_featurerequests"."target_date", "feature_request_app_featurerequests"."product_area_id" FROM "feature_request_app_featurerequests"; args=()
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.001) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 3; args=(3,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.005) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 4; args=(4,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client"; args=()
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea"; args=()
+"GET /feature_request_list/ HTTP/1.1" 200 1753
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern 'feature_request_list/' [name='feature_request_list']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern 'feature_request_list<drf_format_suffix:format>' [name='feature_request_list']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern '<drf_format_suffix:format>' [name='home']>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2762
+"GET / HTTP/1.1" 200 6605
+"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/js/knockout-3.0.0.js HTTP/1.1" 304 0
+"GET /static/js/jquery.min.js HTTP/1.1" 304 0
+"GET /static/js/knockout-validation.js HTTP/1.1" 304 0
+"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+(0.001) SELECT "feature_request_app_featurerequests"."id", "feature_request_app_featurerequests"."title", "feature_request_app_featurerequests"."description", "feature_request_app_featurerequests"."client_id", "feature_request_app_featurerequests"."client_priority", "feature_request_app_featurerequests"."target_date", "feature_request_app_featurerequests"."product_area_id" FROM "feature_request_app_featurerequests"; args=()
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 3; args=(3,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.001) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 4; args=(4,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client"; args=()
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea"; args=()
+"GET /feature_request_list/ HTTP/1.1" 200 1753
+"GET / HTTP/1.1" 200 6605
+"GET /static/css/main.css HTTP/1.1" 200 248
+"GET /static/js/knockout-validation.js HTTP/1.1" 200 16623
+"GET /static/js/jquery.min.js HTTP/1.1" 200 86926
+"GET /static/js/knockout-3.0.0.js HTTP/1.1" 200 46128
+"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200
+"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern 'feature_request_list/' [name='feature_request_list']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern 'feature_request_list<drf_format_suffix:format>' [name='feature_request_list']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'feature_request_app.urls' from '/home/satish/request-feature-app/my_feature_requests/feature_request_app/urls.py'> (None:None) ''>, <URLPattern '<drf_format_suffix:format>' [name='home']>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/satish/request-feature-app/env/lib/python3.4/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2762
+(0.168) SELECT "feature_request_app_featurerequests"."id", "feature_request_app_featurerequests"."title", "feature_request_app_featurerequests"."description", "feature_request_app_featurerequests"."client_id", "feature_request_app_featurerequests"."client_priority", "feature_request_app_featurerequests"."target_date", "feature_request_app_featurerequests"."product_area_id" FROM "feature_request_app_featurerequests"; args=()
+(0.001) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.001) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 3; args=(3,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 2; args=(2,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client" WHERE "feature_request_app_client"."id" = 1; args=(1,)
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea" WHERE "feature_request_app_productarea"."id" = 4; args=(4,)
+(0.000) SELECT "feature_request_app_client"."id", "feature_request_app_client"."name" FROM "feature_request_app_client"; args=()
+(0.000) SELECT "feature_request_app_productarea"."id", "feature_request_app_productarea"."name" FROM "feature_request_app_productarea"; args=()
+"GET /feature_request_list/ HTTP/1.1" 200 1753

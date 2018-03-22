@@ -1,100 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
-    {% include "header_content.html" %}         
-    <body> 
-        <h2>Feature Request List</h2>
-        <div class="container">
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Request</button>
-            <table class="mails">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Desc</th>
-                  <th>Client</th>
-                  <th>Client Priority</th>
-                  <th>Product Area</th>
-                  <th>Target Date</th>
-                </tr>
-              </thead>
-                <tbody data-bind="foreach: fea_requests">
-                    <tr>
-                        <td data-bind="text: title"></td>
-                        <td data-bind="text: description"></td>
-                        <td data-bind="text: client_name"></td>
-                        <td data-bind="text: client_priority"></td>
-                        <td data-bind="text: product_area_name"></td>
-                        <td data-bind="text: target_date"></td>                                        
-                    </tr>     
-                </tbody>
-            </table>
-            {% include "feature_req_form.html" %}       
+<html lang="en">
+    {% include "header_content.html" %}
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid ">
+                <center><font color="white" size="6">Feature Requests</font>
+                </center>        
+            </div>
+        </nav>      
+        <div class="container-fluid">    
+          <div class="row content">       
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="create_req_btn">Create Request</button> 
+                {% include "feature_req_table.html" %}      
+            </div>        
+          </div>
         </div>
+        {% include "feature_req_form.html" %}
+        {% include "footer_content.html" %}
     </body>
-    <script>
-      function FeatureRequests(data) {
-          this.title = ko.observable(data.title);
-          this.description = ko.observable(data.description);
-          this.client_name = ko.observable(data.client_name);
-          this.client_priority = ko.observable(data.client_priority);
-          this.product_area_name = ko.observable(data.product_area_name);
-          this.target_date = ko.observable(data.target_date);
-      }
-
-      function FeatureReqViewModel() {
-          var self = this;
-
-          
-          self.client_list = ko.observableArray();
-          self.product_area_list = ko.observableArray();
-
-          // self.selectedItem = ko.observable();
-
-          self.req_title = ko.observable().extend({ required: true });
-          self.req_desc = ko.observable();
-          self.req_target_date = ko.observable();
-          self.req_client_priority = ko.observable();
-          self.req_pro_area = ko.observable();
-          self.req_client = ko.observable();
-          
-          self.fea_requests = ko.observableArray([]);
-        
-          self.getAllRequests = function() {          
-            $.getJSON("/feature_request_list/", function(allData) {                  
-              var mappedRequests = $.map(allData.feature_requests, function(item) {
-              return new FeatureRequests(item) });
-              self.fea_requests(mappedRequests);
-              self.client_list(allData.clients)
-              self.product_area_list(allData.producct_areas)
-            });
-          }
-
-          self.form_post = function() {                
-                var data = {
-                  'client': self.req_client().id,
-                  'product_area': self.req_pro_area().id,
-                  'client_priority': self.req_client_priority(),
-                  'target_date': self.req_target_date(),
-                  'title': self.req_title(),
-                  'description': self.req_desc()
-                }/* Your data in JSON format - see below */;
-                console.log(data)
-                $.ajax("/feature_request_list/", {
-                    data: data,
-                    type: "POST",                     
-                    success: function(result) {
-                      self.getAllRequests();                       
-                      alert(result)                       
-                    },
-                    error: function(result){ 
-                      alert("Fetaure Request Note created")}
-                   
-                });
-                $("#myModal .close").click()
-            };
-
-          self.getAllRequests();
-
-        };
-      ko.applyBindings(new FeatureReqViewModel());                   
-    </script> 
+    <script src="{% static 'js/feature_request.js' %}" defer></script>
 </html>

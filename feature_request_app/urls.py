@@ -5,9 +5,8 @@ from . import views
 
 urlpatterns = [
 	path('feature_request_list/', views.FeatureRequestList.as_view(), 
-		name='feature_request_list'),
+								name='feature_request_list'),
 	path('', views.HomePageView.as_view(), name='home'),
-
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

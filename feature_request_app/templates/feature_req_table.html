@@ -1,0 +1,22 @@
+<table id="feature_requests_table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Desc</th>
+      <th>Client</th>
+      <th>Client Priority</th>
+      <th>Product Area</th>
+      <th>Target Date</th>
+    </tr>
+  </thead>
+    <tbody data-bind="foreach: feature_requests_array">
+        <tr>
+            <td data-bind="text: title"></td>
+            <td data-bind="text: description"></td>
+            <td data-bind="text: client_name"></td>
+            <td data-bind="text: client_priority"></td>
+            <td data-bind="text: product_area_name"></td>
+            <td data-bind="formatDate: target_date"></td>                              
+        </tr>     
+    </tbody>
+</table>

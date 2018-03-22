@@ -101,10 +101,49 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Logging Cinfiguration 
+logs = os.path.join(BASE_DIR, 'logs')  
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': logs+'/requests.log',
+        },
+        'Feature_Request_App_Logfile': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': logs+'/requests_app.log',
+            'maxBytes': 1024,
+            'backupCount': 5,
+            'formatter': 'verbose',
 
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'feature_request_app':{
+            'handlers': ['Feature_Request_App_Logfile'],
+            'level': 'DEBUG',
+        },
+    },
+}
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'

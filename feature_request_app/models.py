@@ -1,6 +1,7 @@
 from django.db import models
 
 from django.core.validators import MinValueValidator
+from django.utils import timezone
 
 
 
@@ -8,7 +9,7 @@ from django.core.validators import MinValueValidator
 class Client(models.Model):
 	name = models.CharField(max_length=30, unique=True)
 
-
+	
 # product area table
 class ProductArea(models.Model):
 	name = models.CharField(max_length=30, unique=True)
@@ -20,8 +21,8 @@ class FeatureRequests(models.Model):
 	description = models.TextField()
 	client = models.ForeignKey('Client', on_delete=models.CASCADE)
 	client_priority = models.IntegerField(default=1,
-									    validators=[MinValueValidator(1)]
-									    )
+										validators=[MinValueValidator(1)]
+										)# priority must be greater than 0
 	target_date = models.DateTimeField(blank=True, null=True)   
 	product_area = models.ForeignKey('ProductArea', on_delete=models.CASCADE)
 

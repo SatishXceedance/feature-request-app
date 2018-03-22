@@ -4,7 +4,9 @@ from feature_request_app.models import Client, ProductArea, FeatureRequests
 
 # Feature request data serializer
 class FeatureRequestSerializer(serializers.ModelSerializer):
+	#get client 
 	client_name = serializers.ReadOnlyField(source="client.name")
+	# get product area 
 	product_area_name = serializers.ReadOnlyField(source="product_area.name")
 
 	class Meta:
@@ -22,7 +24,7 @@ class ClientSerializer(serializers.ModelSerializer):
 
 
 # product-area data serializer
-class ProductAreSerializer(serializers.ModelSerializer):
+class ProductAreaSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = ProductArea
