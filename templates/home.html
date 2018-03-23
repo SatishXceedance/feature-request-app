@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    {% include "header_content.html" %}
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid ">
+                <center><font color="white" size="6">Feature Requests</font>
+                </center>        
+            </div>
+        </nav>      
+        <div class="container-fluid">    
+          <div class="row content">       
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="create_req_btn">Create Request</button> 
+                {% include "feature_req_table.html" %}      
+            </div>        
+          </div>
+        </div>
+        {% include "feature_req_form.html" %}
+        {% include "footer_content.html" %}
+    </body>
+    <script src="{% static 'js/feature_request.js' %}" defer></script>
+</html>
