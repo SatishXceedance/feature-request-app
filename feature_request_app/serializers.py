@@ -2,8 +2,11 @@ from rest_framework import serializers
 from feature_request_app.models import Client, ProductArea, FeatureRequests
 
 
-# Feature request data serializer
+
 class FeatureRequestSerializer(serializers.ModelSerializer):
+	"""
+	Feature request data serializer
+	"""
 	#get client 
 	client_name = serializers.ReadOnlyField(source="client.name")
 	# get product area 
@@ -15,16 +18,19 @@ class FeatureRequestSerializer(serializers.ModelSerializer):
 			'client_name', 'product_area_name',)
 
 
-# client data serializer
 class ClientSerializer(serializers.ModelSerializer):
-
+	"""
+	client data serializer
+	"""
 	class Meta:
 		model = Client
 		fields = ('id', 'name',)
 
 
-# product-area data serializer
 class ProductAreaSerializer(serializers.ModelSerializer):
+	"""
+	product-area data serializer
+	"""
 
 	class Meta:
 		model = ProductArea

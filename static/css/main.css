@@ -44,6 +44,12 @@
       background-color: #555;
       color: white;
       padding: 0px;
+      background-color: #555;
+      color: white;
+      padding: 0px;
+      bottom: 0;
+      position: absolute;
+      width: 100%;
     }
     
     footer p {
@@ -67,7 +73,8 @@
 		float: right;
 		margin-bottom: 5px;
 		margin-top: 5px;
-		background-color: #585858;	
+		background-color: #585858;
+    border-color: #585858;	
 	}
 
   /*feature requests table css*/
@@ -95,4 +102,15 @@
 
     .navbar{
         background-color: #585858;
+    }
+
+    .ui-widget-header {
+      border: 1px solid #555;
+      background: #555 url(images/ui-bg_gloss-wave_36_f6a828_500x100.png) 50% 50% repeat-x;
+      
+    }
+
+    .ui-state-highlight{
+      border: 1px solid #555 !important;
+      background: #fff url(images/ui-bg_highlight-soft_75_ffe45c_1x100.png) 50% top repeat-x !important;
     }

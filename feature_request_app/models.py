@@ -21,8 +21,8 @@ class FeatureRequests(models.Model):
 	description = models.TextField()
 	client = models.ForeignKey('Client', on_delete=models.CASCADE)
 	client_priority = models.IntegerField(default=1,
-										validators=[MinValueValidator(1)]
-										)# priority must be greater than 0
+			validators=[MinValueValidator(1)]
+		)
 	target_date = models.DateTimeField(blank=True, null=True)   
 	product_area = models.ForeignKey('ProductArea', on_delete=models.CASCADE)
 

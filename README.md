@@ -1,5 +1,6 @@
 # Steps to run the application
 
+'''
 # Install virtualenv in your system
 $ python3 -m pip install --user virtualenv (For macOS and Linux)
 $ py -m pip install --user virtualenv (For Windows)
@@ -10,7 +11,7 @@ $ python3 -m virtualenv env (For macOS and Linux)
 $ py -m virtualenv env (For Windows)
 
 # Activate virtual environment
-$ source env/bin/activate (For macOS and Linux)
+$ source env/Scripts/activate (For macOS and Linux)
 $ .\env\Scripts\activate (For Windows)
 
 # Get project code form github
@@ -26,7 +27,7 @@ $ pip install -r requirements.txt
 $ python manage.py migrate
 
 # Runserver on your local system
-$ python manage runserver
+$ python manage.py runserver
 
 # Go to the browser and open http://127.0.0.1:8000/
 
@@ -34,3 +35,5 @@ $ python manage runserver
 
 # to deactivate the virtual environment
 $ deativate
+
+'''

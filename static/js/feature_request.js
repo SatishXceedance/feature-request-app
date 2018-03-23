@@ -1,7 +1,6 @@
 // datepicker configuration for target date
 $(document).ready(function(){
-    $( "#dt" ).datepicker({dateFormat: 'yy-mm-dd'});
-    // $("#feature_requests_table").DataTable()
+    $( "#dt" ).datepicker({dateFormat: 'yy-mm-dd', minDate: 0 });
 })
             
 // knockout validation configuration
@@ -17,21 +16,17 @@ ko.validation.init({
 function FeatureReqViewModel() {
   var self = this; 
   self.validateNow = ko.observable(false);
-
   self.client_list = ko.observableArray();
   self.product_area_list = ko.observableArray();
-
   self.req_title = ko.observable().extend({ required: true });
   self.req_desc = ko.observable();
   self.req_target_date = ko.observable().extend({
-        required: { message: 'Target Date is mandatory' },
-      }); 
-
+      required: { message: 'Target Date Is Mandatory' },
+  }); 
   self.req_client_priority = ko.observable().extend({ 
       min: 1, 
-      required: { message: 'This should be greater than 0.' 
-      }
-    });
+      required: { message: 'Priority Should Be Greater Than 0'}
+  });
   self.req_pro_area = ko.observable();
   self.req_client = ko.observable();          
   self.feature_requests_array = ko.observableArray();
@@ -40,16 +35,15 @@ function FeatureReqViewModel() {
   // get all feature requests, clients & product area list
   self.getAllRequests = function() {          
     $.getJSON("/feature_request_list/", function(allData) {
-          
       self.feature_requests_array(allData.feature_requests);
       self.client_list(allData.clients)
       self.product_area_list(allData.product_areas)
     });
   }
 
+
   // create new feature request
   self.form_post = function() {
-        console.log("FeatureReqViewModel", self.req_target_date())
         self.validateNow = ko.observable(true);
         if (self.errors().length == 0) {
             var data = {
@@ -59,7 +53,7 @@ function FeatureReqViewModel() {
               'target_date': self.req_target_date(),
               'title': self.req_title(),
               'description': self.req_desc()
-            }/* Your data in JSON format - see below */;
+            };
             $.ajax("/feature_request_list/", {
                 data: data,
                 type: "POST",                     
@@ -70,16 +64,14 @@ function FeatureReqViewModel() {
                   $("#myModal .close").click()                       
                 },
                 error: function(result){ 
-                  alert("Fetaure Request Not Created")}
-               
+                  alert(result.responseText);
+                }               
             });
-        } else {
-            alert('Please check your submission.');
-            self.errors.showAllMessages();
-        }            
-        
-    };
 
+        } else {
+            self.errors.showAllMessages();
+        }       
+      };
   self.getAllRequests();
 };
 

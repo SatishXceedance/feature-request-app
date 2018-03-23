@@ -9,17 +9,16 @@ import json
 client = Client()
 
 
-"""
-initialize feature requests api test cases
-"""
 class FeatureRequestsTests(TestCase):
-
+    """
+    initialize feature requests api test cases
+    """
     def setUp(self):
         """
         setup to get and create feature requests
         """
         client_obj = client_table.objects.create(name="test_client")
-        product_area_obj = ProductArea.objects.create(name="test_product_are")
+        product_area_obj = ProductArea.objects.create(name="test_product_area")
 
     def test_get_data(self):
         """
