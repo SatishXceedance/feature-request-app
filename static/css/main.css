@@ -23,7 +23,7 @@
         height: auto;
         padding: 15px;
       }
-      .row.content {height:auto;} 
+    .row.content {height:auto;} 
     }.navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -43,19 +43,11 @@
     footer {
       background-color: #555;
       color: white;
-      padding: 0px;
       background-color: #555;
       color: white;
-      padding: 0px;
-      bottom: 0;
-      position: absolute;
-      width: 100%;
+      padding: 15px;     
     }
     
-    footer p {
-      padding-top: 5px
-    }
-
     .footer_text{
       float: left;
     }

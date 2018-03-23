@@ -1,6 +1,7 @@
 // datepicker configuration for target date
 $(document).ready(function(){
    $( "#dt" ).datepicker({dateFormat: 'yy-mm-dd', minDate: 0 });
+   
 })
             
 // knockout validation configuration
