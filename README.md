@@ -1,17 +1,20 @@
 # Steps to run the application
-
 '''
+
 # Install virtualenv in your system
 $ python3 -m pip install --user virtualenv (For macOS and Linux)
+
 $ py -m pip install --user virtualenv (For Windows)
 
 
 # Create virtual environment
-$ python3 -m virtualenv env (For macOS and Linux)
+$ python3 -m virtualenv env (For macOS and Linux) 
+
 $ py -m virtualenv env (For Windows)
 
 # Activate virtual environment
 $ source env/Scripts/activate (For macOS and Linux)
+
 $ .\env\Scripts\activate (For Windows)
 
 # Get project code form github
