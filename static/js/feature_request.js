@@ -38,9 +38,12 @@ function FeatureReqViewModel() {
    // get all feature requests, clients & product area list
    self.getAllRequests = function() {          
       $.getJSON("/feature_request_list/", function(allData) {
+
+         $('#feature_requests_table tbody').empty()
          self.feature_requests_array(allData.feature_requests);
          self.client_list(allData.clients)
          self.product_area_list(allData.product_areas)
+         $('#feature_requests_table').dataTable();
       });
    }
 
@@ -73,10 +76,11 @@ function FeatureReqViewModel() {
             type: "POST",                     
             success: function(result) {
                self.feature_requests_array.removeAll();
-               self.getAllRequests();                       
+               // self.getAllRequests();                       
                alert(result)
-               self.emptyRequestForm();
-               $("#myModal .close").click();                       
+               // self.emptyRequestForm();
+               // $("#myModal .close").click();
+               window.location.reload();                       
             },
             error: function(result){ 
                alert(result.responseText);

@@ -1,6 +1,15 @@
-  /*knockout js validation css*/
-  .validationMessage { color: Red; }
-  .customMessage { color: Orange; }
+    /*knockout js validation css*/
+    .validationMessage { color: Red; }
+    .customMessage { color: Orange; }
+
+    html {
+      height: 100%;
+    }
+    body {
+      position: relative;
+      min-height: 100%;
+      padding-bottom:80px;
+    }
 
     .navbar {
       margin-bottom: 0;
@@ -41,15 +50,22 @@
     
     /* Set black background color, white text and some padding */
     footer {
-      background-color: #555;
+      background-color: #414A4D;
       color: white;
-      background-color: #555;
-      color: white;
-      padding: 15px;     
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding:10px; 
+
     }
     
     .footer_text{
-      float: left;
+      color: white;
+      line-height: 10px
+    }
+
+    footer a{
+      color: #fff !important;
     }
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -65,8 +81,9 @@
 		float: right;
 		margin-bottom: 5px;
 		margin-top: 5px;
-		background-color: #585858;
-    border-color: #585858;	
+		background-color: #828E91;
+    border-color: #828E91;
+    margin-bottom: 10px;	
 	}
 
   /*feature requests table css*/
@@ -89,11 +106,16 @@
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
-        background-color: #585858;
+        background-color: #828E91;
         color: white;}
 
     .navbar{
-        background-color: #585858;
+        background-color: #414A4D;
+        border-color: #414A4D;
+        padding: 6px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        font-size: 30px;
     }
 
     .ui-widget-header {
@@ -105,4 +127,10 @@
     .ui-state-highlight{
       border: 1px solid #555 !important;
       background: #fff url(images/ui-bg_highlight-soft_75_ffe45c_1x100.png) 50% top repeat-x !important;
+    }
+
+    #feature_requests_table_wrapper{
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 2px -2px #ccc;
     }
