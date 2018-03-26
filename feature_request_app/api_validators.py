@@ -64,9 +64,9 @@ def is_valid_date(target_date):
 	"""
 	# target date format validation
 	try:
-		target_date = datetime.datetime.strptime(target_date, '%Y-%m-%d')
-		# target date must be greater than today's date
-		if datetime.datetime.now() <= target_date:
+		target_date = datetime.datetime.strptime(target_date, '%d-%m-%Y')
+		# target date must be greater than or equal to today's date
+		if datetime.datetime.now().date() <= target_date.date():
 			return (True, target_date)
 		else:
 			response = Response('Target Date Not Valid', status=status.HTTP_400_BAD_REQUEST)
