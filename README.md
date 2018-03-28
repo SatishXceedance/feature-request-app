@@ -1,26 +1,25 @@
+# Technologies and database:
+Database: 
+•	sqlite
+
+Back-end:
+•	python >= 3.0
+•	django 2.0.3
+•	django-rest-framework
+
+Front-end:
+•	HTML
+•	CSS
+•	bootstrap
+•	JavaScript
+•	jquery
+•	knockout js 
+•	Jquery.datatTable
+
+	
 # Steps to run the application
 
 ```
-# Technologies and database:
-Database: 
-sqlite
-
-For back-end:
-1. python >= 3.0
-2. django 2.0.3
-3. django-rest-framework
-
-For front-end:
-1. HTML
-2. CSS
-3. bootstrap
-4. JavaScript
-5. jquery
-6. knockout js
-7. knockout validations  
-8. Jquery.datatTable
-	
-
 
 # Install virtualenv in your system
 $ python3 -m pip install --user virtualenv (For macOS and Linux)
