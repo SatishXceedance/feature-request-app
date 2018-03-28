@@ -1,20 +1,20 @@
 # Technologies and database:
 Database: 
-•	sqlite
+•sqlite
 
 Back-end:
-•	python >= 3.0
-•	django 2.0.3
-•	django-rest-framework
+•python >= 3.0
+•django 2.0.3
+•django-rest-framework
 
 Front-end:
-•	HTML
-•	CSS
-•	bootstrap
-•	JavaScript
-•	jquery
-•	knockout js 
-•	Jquery.datatTable
+•HTML
+•CSS
+•bootstrap
+•JavaScript
+•jquery
+•knockout js 
+•Jquery.datatTable
 
 	
 # Steps to run the application
