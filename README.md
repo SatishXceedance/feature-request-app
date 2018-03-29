@@ -1,5 +1,5 @@
 # Technologies and database:
-Database:  
+Database: 
 •sqlite
 
 Back-end:  
