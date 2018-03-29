@@ -34,14 +34,14 @@ class FeatureRequestsTests(TestCase):
         """
         url = reverse('feature_request_list')
         client_obj = client_table.objects.get(name='test_client')
-        product_area_obj = ProductArea.objects.get(name='test_product_are')
+        product_area_obj = ProductArea.objects.get(name='test_product_area')
         data = {'client': client_obj.id,
                 'product_area': product_area_obj.id,
                 'client_priority': 1,
-                'target_date': '2018-12-12',
-                'title': 'testingggg',
+                'target_date': '12-12-2018',
+                'title': 'testing',
                 'description': 'this is for testing'}
         response = client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(FeatureRequests.objects.count(), 1)
-        self.assertEqual(FeatureRequests.objects.get().title, 'testingggg')
+        self.assertEqual(FeatureRequests.objects.get().title, 'testing')
