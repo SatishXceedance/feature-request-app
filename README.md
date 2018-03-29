@@ -43,6 +43,9 @@ $ cd feature-request-app
 # Install project dependencies from requirements.txt file
 $ pip install -r requirements.txt
 
+# For getting static files
+$ python manage.py collectstatic
+
 # For getting database tables 
 $ python manage.py migrate
 
