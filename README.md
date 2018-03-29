@@ -55,6 +55,7 @@ $ python manage.py runserver
 
 # Run Test cases
 $ python manage.py test
+
 # to deactivate the virtual environment
 $ deativate
 
